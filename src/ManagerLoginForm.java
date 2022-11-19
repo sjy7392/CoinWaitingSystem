@@ -4,17 +4,17 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
 
-public class LoginForm extends JDialog {
+public class ManagerLoginForm extends JDialog {
     private JTextField tfEmail;
-    private JPasswordField pfPassword;
     private JButton btnOK;
     private JButton btnCancel;
-    private JPanel loginPanel;
+    private JPasswordField pfPassword;
+    private JPanel ManegerLoginPanel;
 
-    public LoginForm(JFrame parent) {
+    public ManagerLoginForm(JFrame parent) {
         super(parent);
         setTitle("Login");
-        setContentPane(loginPanel);
+        setContentPane(ManegerLoginPanel);
         setMinimumSize(new Dimension(450, 474));
         setModal(true);
         setLocationRelativeTo(parent);
@@ -32,7 +32,7 @@ public class LoginForm extends JDialog {
                     dispose();
                 }
                 else {
-                    JOptionPane.showMessageDialog(LoginForm.this,
+                    JOptionPane.showMessageDialog(ManagerLoginForm.this,
                             "Email or Password Invalid",
                             "Try again",
                             JOptionPane.ERROR_MESSAGE);
@@ -62,7 +62,7 @@ public class LoginForm extends JDialog {
             // Connected to database successfully...
 
             Statement stmt = conn.createStatement();
-            String sql = "SELECT * FROM users WHERE email=? AND password=?";
+            String sql = "SELECT * FROM managers WHERE email=? AND password=?";
             PreparedStatement preparedStatement = conn.prepareStatement(sql);
             preparedStatement.setString(1, email);
             preparedStatement.setString(2, password);
