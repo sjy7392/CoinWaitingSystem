@@ -23,6 +23,15 @@ public class DashboardForm extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 LoginForm loginForm = new LoginForm(DashboardForm.this);
+                User user = loginForm.user;
+                if (user != null) {  //로그인 성공
+                    //JOptionPane.showMessageDialog(null, "Successful Authentication of: " + user.name);  //팝업창 띄우고
+                    NoraebangListForm window = new NoraebangListForm();  //NoraebangListForm으로 넘어가기
+                    loginForm.setVisible(false);
+                }
+                else {  //로그인 실패
+                    JOptionPane.showMessageDialog(null, "Authentication canceled");
+                }
             }
         });
 
@@ -30,13 +39,6 @@ public class DashboardForm extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 RegisterForm registerForm = new RegisterForm(DashboardForm.this);
-            }
-        });
-
-        btnManagerLogin.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                ManagerLoginForm managerLoginForm = new ManagerLoginForm(DashboardForm.this);
             }
         });
     }

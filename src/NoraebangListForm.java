@@ -43,7 +43,6 @@ public class NoraebangListForm extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 FirstNoraebangForm firstNoraebangForm = new FirstNoraebangForm();
                 firstNoraebangForm.setVisible(true);
-                dispose();
             }
         });
     }

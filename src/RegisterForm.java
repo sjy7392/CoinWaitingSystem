@@ -18,7 +18,7 @@ public class RegisterForm extends JDialog {
     private JPasswordField pfPassword;
     private JPasswordField pfConfirmPassword;
 
-    public RegisterForm(JFrame parent){
+    public RegisterForm(JFrame parent){ //parent가 존재해서 창이 안꺼지는건가
         super(parent);
         setTitle("Create a new account");
         setContentPane(registerPanel);
