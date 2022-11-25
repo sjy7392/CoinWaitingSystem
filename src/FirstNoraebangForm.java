@@ -10,7 +10,7 @@ import java.sql.PreparedStatement;
 import java.sql.Statement;
 //textField로 data 입력받아 DB에 값 저장한 후 list로 출력
 //*고려사항*
-//
+
 public class FirstNoraebangForm extends JFrame {
     private JPanel firstnoraebangPanel;
     private JTextField tfName;
@@ -19,21 +19,29 @@ public class FirstNoraebangForm extends JFrame {
     private JTextField tfTime;
     private JButton btnAdd;
     private JButton btnDelete;
+    private DefaultTableModel model;
+    private DefaultTableModel model_2;
     private JTable showTable;
+    private JScrollPane scrollTable;
 
-    public FirstNoraebangForm() {
+    public
+
+    FirstNoraebangForm() {
         setTitle("FirstNoraebang");
         setContentPane(firstnoraebangPanel);
         setMinimumSize(new Dimension(500, 429));
         setSize(1200, 700);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
         setVisible(true);
         createTable();
+        //Table 생성
+
         btnAdd.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 registerNoraebangUser();
-                //createTable();  //JTable에 출력
+                createTable();  //JTable에 출력
             }
         });
     }
@@ -51,7 +59,6 @@ public class FirstNoraebangForm extends JFrame {
 
         JOptionPane.showMessageDialog(null, "Successfully Added");
         noraebangUser = addNoraebangUserToDatabase(name, phone, NumberOfPersons, time); //db에 추가
-        createTable(); //JTable에 data 출력하기
     }
 
     public NoraebangUser noraebangUser;
@@ -65,7 +72,7 @@ public class FirstNoraebangForm extends JFrame {
             Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
 
             Statement stmt = conn.createStatement();
-            String sql = "INSERT INTO Noraebangusers (name, phone, NumberOfPersons, time) " +
+            String sql = "INSERT INTO noraebangusers (name, phone, NumberOfPersons, time) " +
                     "VALUES (?, ?, ?, ?)";
             PreparedStatement preparedStatement = conn.prepareStatement(sql);
             preparedStatement.setString(1, name);
@@ -95,6 +102,8 @@ public class FirstNoraebangForm extends JFrame {
         final String USERNAME = "root";
         final String PASSWORD = "7392";
 
+        String[] columnNames = {"Name","Phone","numberofpersons","time"};
+        model = new DefaultTableModel(columnNames, 0);
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         try {
@@ -102,13 +111,18 @@ public class FirstNoraebangForm extends JFrame {
             Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
             pstmt = conn.prepareStatement(sql);
             rs = pstmt.executeQuery();
-
+            //빈 테이블 생성
+            //table.setPreferredScrollableViewportSize( new Dimension(470, 200));
             while (rs.next()) {
-                Object[][] data = {{rs.getString("name"), rs.getString("phone"), rs.getString("numberofpersons"), rs.getString("time")}};
-                String[] columnNames = {"Name","Phone","numberofpersons","time"};
-                showTable = new JTable(data,columnNames);
-        }
+                String name = rs.getString("name");
+                String phone = rs.getString("phone");
+                String numberofpersons= rs.getString("numberofpersons");
+                String time = rs.getString("time");
 
+                Object data[] = {name, phone, numberofpersons, time};
+                model.addRow(data);
+            }
+            showTable.setModel(model);
 
 
         }catch (Exception e){
@@ -122,7 +136,7 @@ public class FirstNoraebangForm extends JFrame {
             public void run() {
                 try {
                     FirstNoraebangForm window = new FirstNoraebangForm();
-                    //NoraebangUser noraebangUser = window.noraebangUser;
+//                    NoraebangUser noraebangUser = window.noraebangUser;
                     window.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();

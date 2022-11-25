@@ -122,10 +122,12 @@ public class RegisterForm extends JDialog {
         RegisterForm myForm=new RegisterForm(null);
         User user=myForm.user;
         if(user!=null){
-            System.out.println("Successful registartion of: "+user.name);
+            JOptionPane.showMessageDialog(null, "Successfully Added");
+            //System.out.println("Successful registartion of: "+user.name);
         }
         else{
-            System.out.println("Registration cancled");
+            JOptionPane.showMessageDialog(null, "Registration cancled");
+            //System.out.println("Registration cancled");
         }
     }
 }
