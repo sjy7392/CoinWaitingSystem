@@ -20,7 +20,6 @@ public class FirstNoraebangForm extends JFrame {
     private JButton btnAdd;
     private JButton btnDelete;
     private DefaultTableModel model;
-    private DefaultTableModel model_2;
     private JTable showTable;
     private JScrollPane scrollTable;
 
@@ -42,6 +41,16 @@ public class FirstNoraebangForm extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 registerNoraebangUser();
                 createTable();  //JTable에 출력
+            }
+        });
+        btnDelete.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(showTable.getSelectedRow() != -1) {
+                    // remove selected row from the model
+                    model.removeRow(showTable.getSelectedRow());
+                    JOptionPane.showMessageDialog(null, "Selected row deleted successfully");
+                }
             }
         });
     }
@@ -102,7 +111,7 @@ public class FirstNoraebangForm extends JFrame {
         final String USERNAME = "root";
         final String PASSWORD = "7392";
 
-        String[] columnNames = {"Name","Phone","numberofpersons","time"};
+        String[] columnNames = {"Name","Phone","Numberofpersons","Time"};
         model = new DefaultTableModel(columnNames, 0);
         PreparedStatement pstmt = null;
         ResultSet rs = null;
