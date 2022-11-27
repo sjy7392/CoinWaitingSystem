@@ -81,8 +81,8 @@ public class FirstNoraebangForm extends JFrame {
             Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
 
             Statement stmt = conn.createStatement();
-            String sql = "INSERT INTO noraebangusers (name, phone, NumberOfPersons, time) " +
-                    "VALUES (?, ?, ?, ?)";  //FirstNoraebang 테이블 이름 noraebangusers (+Second, ..., fifthNoraebang 파일 생성 후 테이블 이름 noraebangusers2, 3, ..로 설정)
+            String sql = "INSERT INTO first_noraebang_users (name, phone, NumberOfPersons, time) " +
+                    "VALUES (?, ?, ?, ?)";  //FirstNoraebang 테이블 이름 first_noraebang_users (+Second, ..., fifthNoraebang 파일 생성 후 테이블 이름 noraebangusers2, 3, ..로 설정)
             PreparedStatement preparedStatement = conn.prepareStatement(sql);
             preparedStatement.setString(1, name);
             preparedStatement.setString(2, phone);
@@ -116,7 +116,7 @@ public class FirstNoraebangForm extends JFrame {
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         try {
-            String sql = "SELECT name, phone, numberofpersons, time FROM mystore.noraebangusers";
+            String sql = "SELECT name, phone, numberofpersons, time FROM mystore.first_noraebang_users";
             Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
             pstmt = conn.prepareStatement(sql);
             rs = pstmt.executeQuery();
