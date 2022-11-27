@@ -52,5 +52,37 @@ public class NoraebangListForm extends JFrame {
                 firstNoraebangForm.setVisible(true);
             }
         });
+
+        secondNoraeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                SecondNoraebangForm secondNoraebangForm = new SecondNoraebangForm();
+                secondNoraebangForm.setVisible(true);
+            }
+        });
+
+        thirdNoraeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                FirstNoraebangForm firstNoraebangForm = new FirstNoraebangForm();
+                firstNoraebangForm.setVisible(true);
+            }
+        });
+
+        fourthNoraeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                FirstNoraebangForm firstNoraebangForm = new FirstNoraebangForm();
+                firstNoraebangForm.setVisible(true);
+            }
+        });
+
+        fifthNoraeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                FirstNoraebangForm firstNoraebangForm = new FirstNoraebangForm();
+                firstNoraebangForm.setVisible(true);
+            }
+        });
     }
 }
