@@ -11,8 +11,8 @@ import java.sql.Statement;
 //textField로 data 입력받아 DB에 값 저장한 후 list로 출력
 //*고려사항*
 
-public class FirstNoraebangForm extends JFrame {
-    private JPanel firstNoraebangPanel;
+public class FirstNoraebangForm_ extends JFrame {
+    private JPanel firstnoraebangPanel;
     private JTextField tfName;
     private JTextField tfPhone;
     private JTextField tfNumberOfPersons;
@@ -23,10 +23,9 @@ public class FirstNoraebangForm extends JFrame {
     private JTable showTable;
     private JScrollPane scrollTable;
 
-
-    public FirstNoraebangForm() {
+    public FirstNoraebangForm_() {
         setTitle("FirstNoraebang");
-        setContentPane(firstNoraebangPanel);
+        setContentPane(firstnoraebangPanel);
         setMinimumSize(new Dimension(500, 429));
         setSize(1200, 700);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -143,7 +142,7 @@ public class FirstNoraebangForm extends JFrame {
             @Override
             public void run() {
                 try {
-                    FirstNoraebangForm window = new FirstNoraebangForm();
+                    FirstNoraebangForm_ window = new FirstNoraebangForm_();
                     NoraebangUser noraebangUser = window.noraebangUser;
                     window.setVisible(true);
                 } catch (Exception e) {
@@ -151,9 +150,5 @@ public class FirstNoraebangForm extends JFrame {
                 }
             }
         });
-    }
-
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
     }
 }
