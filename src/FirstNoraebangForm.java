@@ -82,7 +82,7 @@ public class FirstNoraebangForm extends JFrame {
 
             Statement stmt = conn.createStatement();
             String sql = "INSERT INTO noraebangusers (name, phone, NumberOfPersons, time) " +
-                    "VALUES (?, ?, ?, ?)";
+                    "VALUES (?, ?, ?, ?)";  //FirstNoraebang 테이블 이름 noraebangusers (+Second, ..., fifthNoraebang 파일 생성 후 테이블 이름 noraebangusers2, 3, ..로 설정)
             PreparedStatement preparedStatement = conn.prepareStatement(sql);
             preparedStatement.setString(1, name);
             preparedStatement.setString(2, phone);
@@ -145,7 +145,7 @@ public class FirstNoraebangForm extends JFrame {
             public void run() {
                 try {
                     FirstNoraebangForm window = new FirstNoraebangForm();
-//                    NoraebangUser noraebangUser = window.noraebangUser;
+                    NoraebangUser noraebangUser = window.noraebangUser;
                     window.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();
