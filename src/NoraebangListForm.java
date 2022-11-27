@@ -48,7 +48,7 @@ public class NoraebangListForm extends JFrame {
         firstNoraeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                FirstNoraebangForm_ firstNoraebangForm = new FirstNoraebangForm_();
+                FirstNoraebangForm firstNoraebangForm = new FirstNoraebangForm();
                 firstNoraebangForm.setVisible(true);
             }
         });
@@ -64,7 +64,7 @@ public class NoraebangListForm extends JFrame {
         thirdNoraeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                FirstNoraebangForm_ firstNoraebangForm = new FirstNoraebangForm_();
+                FirstNoraebangForm firstNoraebangForm = new FirstNoraebangForm();
                 firstNoraebangForm.setVisible(true);
             }
         });
@@ -72,7 +72,7 @@ public class NoraebangListForm extends JFrame {
         fourthNoraeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                FirstNoraebangForm_ firstNoraebangForm = new FirstNoraebangForm_();
+                FirstNoraebangForm firstNoraebangForm = new FirstNoraebangForm();
                 firstNoraebangForm.setVisible(true);
             }
         });
@@ -80,7 +80,7 @@ public class NoraebangListForm extends JFrame {
         fifthNoraeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                FirstNoraebangForm_ firstNoraebangForm = new FirstNoraebangForm_();
+                FirstNoraebangForm firstNoraebangForm = new FirstNoraebangForm();
                 firstNoraebangForm.setVisible(true);
             }
         });
