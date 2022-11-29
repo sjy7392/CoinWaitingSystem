@@ -8,8 +8,6 @@ public class DashboardForm extends JFrame {
     private JLabel lbAdmin;
     private JButton btnUserLogin;
     private JButton btnUserRegister;
-    private JButton btnManagerLogin;
-    private JButton btnManagerRegister;
 
     public DashboardForm(){
         setTitle("Dashboard");
@@ -25,7 +23,6 @@ public class DashboardForm extends JFrame {
                 LoginForm loginForm = new LoginForm(DashboardForm.this);
                 User user = loginForm.user;
                 if (user != null) {  //로그인 성공
-                    //JOptionPane.showMessageDialog(null, "Successful Authentication of: " + user.name);  //팝업창 띄우고
                     NoraebangListForm window = new NoraebangListForm();  //NoraebangListForm으로 넘어가기
                     loginForm.setVisible(false);
                 }

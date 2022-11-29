@@ -24,7 +24,8 @@ public class NoraebangListForm extends JFrame {
         myPageButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //my Page 눌렀을때
+                MyPage mypage=new MyPage(); //my Page 눌렀을때
+                mypage.setVisible(true);
             }
         });
     }
@@ -42,7 +43,6 @@ public class NoraebangListForm extends JFrame {
             }
         });
     }
-
 
     private void initialize () {
         firstNoraeButton.addActionListener(new ActionListener() {

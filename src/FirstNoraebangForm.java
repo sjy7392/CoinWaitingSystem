@@ -120,7 +120,6 @@ public class FirstNoraebangForm extends JFrame {
             pstmt = conn.prepareStatement(sql);
             rs = pstmt.executeQuery();
             //빈 테이블 생성
-            //table.setPreferredScrollableViewportSize( new Dimension(470, 200));
             while (rs.next()) {
                 String name = rs.getString("name");
                 String phone = rs.getString("phone");
@@ -151,9 +150,5 @@ public class FirstNoraebangForm extends JFrame {
                 }
             }
         });
-    }
-
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
     }
 }

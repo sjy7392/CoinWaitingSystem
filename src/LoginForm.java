@@ -89,15 +89,5 @@ public class LoginForm extends JDialog {
 
     public static void main(String[] args) {
         LoginForm loginForm = new LoginForm(null);
-        //밑의 코드는 Dashboard에 작성해야함. (Dashboard에선 loginForm을 load하는 것이기 끝이기 때문에)
-        /*User user = loginForm.user;
-        if (user != null) {  //로그인 성공
-            //JOptionPane.showMessageDialog(null, "Successful Authentication of: " + user.name);  //팝업창 띄우고
-            NoraebangListForm window = new NoraebangListForm();  //NoraebangListForm으로 넘어가기
-            loginForm.setVisible(false);
-        }
-        else {  //로그인 실패
-            JOptionPane.showMessageDialog(null, "Authentication canceled");
-        }*/
     }
 }
