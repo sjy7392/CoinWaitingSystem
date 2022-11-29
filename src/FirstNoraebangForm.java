@@ -25,7 +25,7 @@ public class FirstNoraebangForm extends JFrame {
 
 
     public FirstNoraebangForm() {
-        setTitle("FirstNoraebang");
+        setTitle("First Noraebang");
         setContentPane(firstNoraebangPanel);
         setMinimumSize(new Dimension(500, 429));
         setSize(1200, 700);
@@ -80,7 +80,7 @@ public class FirstNoraebangForm extends JFrame {
             Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
 
             Statement stmt = conn.createStatement();
-            String sql = "INSERT INTO first_noraebang_users (name, phone, NumberOfPersons, time) " +
+            String sql = "INSERT INTO first_noraebang_users (name, phone, NumberofPersons, time) " +
                     "VALUES (?, ?, ?, ?)";  //FirstNoraebang 테이블 이름 first_noraebang_users (+Second, ..., fifthNoraebang 파일 생성 후 테이블 이름 noraebangusers2, 3, ..로 설정)
             PreparedStatement preparedStatement = conn.prepareStatement(sql);
             preparedStatement.setString(1, name);
