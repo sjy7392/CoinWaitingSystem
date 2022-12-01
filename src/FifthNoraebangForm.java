@@ -11,8 +11,8 @@ import java.sql.Statement;
 //textField로 data 입력받아 DB에 값 저장한 후 list로 출력
 //*고려사항*
 
-public class SecondNoraebangForm extends JFrame {
-    private JPanel secondNoraebangPanel;
+public class FifthNoraebangForm extends JFrame {
+    private JPanel fifthNoraebangPanel;
     private JTextField tfName;
     private JTextField tfPhone;
     private JTextField tfTime;
@@ -25,9 +25,9 @@ public class SecondNoraebangForm extends JFrame {
 
     public
 
-    SecondNoraebangForm() {
-        setTitle("Second Noraebang");
-        setContentPane(secondNoraebangPanel);
+    FifthNoraebangForm() {
+        setTitle("Fifth Noraebang");
+        setContentPane(fifthNoraebangPanel);
         setMinimumSize(new Dimension(500, 429));
         setSize(1200, 700);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -81,8 +81,8 @@ public class SecondNoraebangForm extends JFrame {
             Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
 
             Statement stmt = conn.createStatement();
-            String sql = "INSERT INTO second_noraebang_users (name, phone, NumberOfPersons, time) " +
-                    "VALUES (?, ?, ?, ?)";  //SecondNoraebang 테이블 이름 Second_noraebang_users (+Second, ..., fifthNoraebang 파일 생성 후 테이블 이름 noraebangusers2, 3, ..로 설정)
+            String sql = "INSERT INTO fifth_noraebang_users (name, phone, NumberOfPersons, time) " +
+                    "VALUES (?, ?, ?, ?)";
             PreparedStatement preparedStatement = conn.prepareStatement(sql);
             preparedStatement.setString(1, name);
             preparedStatement.setString(2, phone);
@@ -116,7 +116,7 @@ public class SecondNoraebangForm extends JFrame {
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         try {
-            String sql = "SELECT name, phone, numberofpersons, time FROM mystore.second_noraebang_users";
+            String sql = "SELECT name, phone, numberofpersons, time FROM mystore.fifth_noraebang_users";
             Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
             pstmt = conn.prepareStatement(sql);
             rs = pstmt.executeQuery();
@@ -144,7 +144,7 @@ public class SecondNoraebangForm extends JFrame {
             @Override
             public void run() {
                 try {
-                    SecondNoraebangForm window = new SecondNoraebangForm();
+                    FifthNoraebangForm window = new FifthNoraebangForm();
                     NoraebangUser noraebangUser = window.noraebangUser;
                     window.setVisible(true);
                 } catch (Exception e) {
