@@ -10,7 +10,7 @@ public class NoraebangListForm extends JFrame {
     private JButton fourthNoraeButton;
     private JButton fifthNoraeButton;
     private JPanel noraebanglistPanel;
-    private JButton myPageButton;
+    private JButton BulletinBoardButton;
 
     public NoraebangListForm() {
         setTitle("NoraebangList");
@@ -21,11 +21,12 @@ public class NoraebangListForm extends JFrame {
         setVisible(true);
 
         initialize();
-        myPageButton.addActionListener(new ActionListener() {
+        BulletinBoardButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                MyPage mypage=new MyPage(); //my Page 눌렀을때
-                mypage.setVisible(true);
+
+                BulletinBoard bulletinBoard=new BulletinBoard(); //bulletin board 눌렀을때
+                bulletinBoard.setVisible(true);
             }
         });
     }

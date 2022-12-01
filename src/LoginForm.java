@@ -59,7 +59,6 @@ public class LoginForm extends JDialog {
 
         try{
             Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
-            // Connected to database successfully...
 
             Statement stmt = conn.createStatement();
             String sql = "SELECT * FROM users WHERE email=? AND password=?";
