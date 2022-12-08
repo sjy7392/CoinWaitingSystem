@@ -23,7 +23,6 @@ public class FirstNoraebangForm extends JFrame {
     private JTable showTable;
     private JScrollPane scrollTable;
 
-
     public FirstNoraebangForm() {
         setTitle("First Noraebang");
         setContentPane(firstNoraebangPanel);
@@ -130,7 +129,6 @@ public class FirstNoraebangForm extends JFrame {
                 model.addRow(data);
             }
             showTable.setModel(model);
-
 
         }catch (Exception e){
             e.printStackTrace();

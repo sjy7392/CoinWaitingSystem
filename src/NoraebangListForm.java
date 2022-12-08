@@ -11,6 +11,7 @@ public class NoraebangListForm extends JFrame {
     private JButton fifthNoraeButton;
     private JPanel noraebanglistPanel;
     private JButton BulletinBoardButton;
+    private JButton btnLogOut;
 
     public NoraebangListForm() {
         setTitle("NoraebangList");
@@ -27,6 +28,12 @@ public class NoraebangListForm extends JFrame {
 
                 BulletinBoard bulletinBoard=new BulletinBoard(); //bulletin board 눌렀을때
                 bulletinBoard.setVisible(true);
+            }
+        });
+        btnLogOut.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                DashboardForm dashboardForm = new DashboardForm();
             }
         });
     }
