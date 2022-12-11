@@ -60,6 +60,7 @@
         </constraints>
         <properties>
           <background color="-1577746"/>
+          <opaque value="false"/>
         </properties>
         <border type="none"/>
         <children>

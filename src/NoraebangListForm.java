@@ -14,7 +14,7 @@ public class NoraebangListForm extends JFrame {
     private JButton btnLogOut;
 
     public NoraebangListForm() {
-        setTitle("NoraebangList");
+        setTitle("Karaoke List");
         setContentPane(noraebanglistPanel);
         setMinimumSize(new Dimension(500, 429));
         setSize(1200, 700);

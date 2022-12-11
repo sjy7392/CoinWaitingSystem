@@ -6,10 +6,11 @@ import java.util.Objects;
 
 public class DashboardForm extends JFrame {
     private JPanel dashboardPanel;
-    private JLabel lbAdmin;
-    private JButton btnUserLogin;
-    private JButton btnUserRegister;
+    private JButton btnUserSignin;
+    private JButton btnUserSignup;
     private JButton btnAdminLogin;
+    private JPanel LeftPanel;
+    private JLabel mainDesign;
 
 
     public DashboardForm(){
@@ -21,7 +22,7 @@ public class DashboardForm extends JFrame {
         setVisible(true);
 
         // 사용자 로그인 버튼
-        btnUserLogin.addActionListener(new ActionListener() {
+        btnUserSignin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 LoginForm loginForm = new LoginForm(DashboardForm.this);
@@ -37,7 +38,7 @@ public class DashboardForm extends JFrame {
         });
 
         // 사용자 회원가입 버튼
-        btnUserRegister.addActionListener(new ActionListener() {
+        btnUserSignup.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 RegisterForm registerForm = new RegisterForm(DashboardForm.this);
@@ -75,5 +76,14 @@ public class DashboardForm extends JFrame {
 
     public static void main(String[] args){
         DashboardForm myform = new DashboardForm();
+    }
+
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
+        ImageIcon mainicon = new ImageIcon("src/images/mainImg.png");
+        Image mainimg = mainicon.getImage();
+        Image mainchangeImg = mainimg.getScaledInstance(500, 268, Image.SCALE_SMOOTH);
+        ImageIcon mainchangeIcon = new ImageIcon(mainchangeImg);
+        mainDesign = new JLabel(mainchangeIcon);
     }
 }

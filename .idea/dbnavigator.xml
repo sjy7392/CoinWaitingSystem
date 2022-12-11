@@ -37,14 +37,14 @@
           <description value="" />
           <database-type value="MYSQL" />
           <config-type value="BASIC" />
-          <database-version value="9999.0" />
+          <database-version value="8.0" />
           <driver-source value="BUILTIN" />
           <driver-library value="" />
           <driver value="" />
           <url-type value="DATABASE" />
           <host value="localhost" />
           <port value="3306" />
-          <database value="myshop" />
+          <database value="mystore" />
           <type value="USER_PASSWORD" />
           <user value="root" />
           <deprecated-pwd value="NzM5Mg==" />
