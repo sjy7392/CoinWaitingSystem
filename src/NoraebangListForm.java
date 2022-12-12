@@ -11,7 +11,7 @@ public class NoraebangListForm extends JFrame {
     private JButton fifthNoraeButton;
     private JPanel noraebanglistPanel;
     private JButton BulletinBoardButton;
-    private JButton btnLogOut;
+    private JButton btnSignOut;
 
     public NoraebangListForm() {
         setTitle("Karaoke List");
@@ -29,7 +29,7 @@ public class NoraebangListForm extends JFrame {
                 bulletinBoard.setVisible(true);
             }
         });
-        btnLogOut.addActionListener(new ActionListener() {
+        btnSignOut.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 DashboardForm dashboardForm = new DashboardForm();

@@ -11,7 +11,6 @@ public class DashboardForm extends JFrame {
     private JButton btnAdminLogin;
     private JPanel LeftPanel;
     private JLabel mainDesign;
-    private JButton button1;
 
 
     public DashboardForm(){

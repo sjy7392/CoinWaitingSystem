@@ -124,18 +124,6 @@
               <visible value="true"/>
             </properties>
           </component>
-          <component id="299ec" class="javax.swing.JButton" binding="button1" default-binding="true">
-            <constraints>
-              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <borderPainted value="false"/>
-              <contentAreaFilled value="false"/>
-              <icon value="images/forceLogo.png"/>
-              <opaque value="false"/>
-              <text value=""/>
-            </properties>
-          </component>
           <vspacer id="ccb1a">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
@@ -146,6 +134,15 @@
               <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
             </constraints>
           </vspacer>
+          <component id="5f63b" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <icon value="images/forceLogo.png"/>
+              <text value=""/>
+            </properties>
+          </component>
         </children>
       </grid>
     </children>
