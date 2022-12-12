@@ -11,6 +11,7 @@ public class DashboardForm extends JFrame {
     private JButton btnAdminLogin;
     private JPanel LeftPanel;
     private JLabel mainDesign;
+    private JButton button1;
 
 
     public DashboardForm(){
@@ -78,12 +79,12 @@ public class DashboardForm extends JFrame {
         DashboardForm myform = new DashboardForm();
     }
 
-    private void createUIComponents() {
+    /*private void createUIComponents() {
         // TODO: place custom component creation code here
         ImageIcon mainicon = new ImageIcon("src/images/mainImg.png");
         Image mainimg = mainicon.getImage();
         Image mainchangeImg = mainimg.getScaledInstance(500, 268, Image.SCALE_SMOOTH);
         ImageIcon mainchangeIcon = new ImageIcon(mainchangeImg);
         mainDesign = new JLabel(mainchangeIcon);
-    }
+    }*/
 }

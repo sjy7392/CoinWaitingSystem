@@ -21,7 +21,6 @@ public class NoraebangListForm extends JFrame {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
 
-        initialize();
         BulletinBoardButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -36,6 +35,9 @@ public class NoraebangListForm extends JFrame {
                 DashboardForm dashboardForm = new DashboardForm();
             }
         });
+
+        initialize();
+
     }
 
     public static void main(String[] args) {
