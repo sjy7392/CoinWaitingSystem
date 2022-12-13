@@ -22,6 +22,7 @@ public class AdminFirstNoraebang extends JFrame {
     private DefaultTableModel model;
     private JTable showTable;
     private JScrollPane scrollTable;
+    private JButton btnBulletinBoard;
 
     public
 
@@ -52,6 +53,14 @@ public class AdminFirstNoraebang extends JFrame {
                     model.removeRow(showTable.getSelectedRow());
                     JOptionPane.showMessageDialog(null, "Selected row deleted successfully");
                 }
+            }
+        });
+        btnBulletinBoard.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                BulletinBoard bulletinBoard=new BulletinBoard(); //bulletin board 눌렀을때
+                bulletinBoard.setVisible(true);
             }
         });
     }

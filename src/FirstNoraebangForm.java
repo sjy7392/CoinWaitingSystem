@@ -21,6 +21,7 @@ public class FirstNoraebangForm extends JFrame {
     private DefaultTableModel model;
     private JTable showTable;
     private JScrollPane scrollTable;
+    private JButton btnBulletinBoard;
 
     public FirstNoraebangForm() {
         setTitle("First Noraebang");
@@ -38,6 +39,15 @@ public class FirstNoraebangForm extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 registerNoraebangUser();
                 createTable();  //JTable에 출력
+            }
+        });
+
+        btnBulletinBoard.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                BulletinBoard bulletinBoard=new BulletinBoard(); //bulletin board 눌렀을때
+                bulletinBoard.setVisible(true);
             }
         });
     }

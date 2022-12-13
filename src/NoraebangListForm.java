@@ -10,7 +10,6 @@ public class NoraebangListForm extends JFrame {
     private JButton fourthNoraeButton;
     private JButton fifthNoraeButton;
     private JPanel noraebanglistPanel;
-    private JButton BulletinBoardButton;
     private JButton btnSignOut;
 
     public NoraebangListForm() {
@@ -21,14 +20,7 @@ public class NoraebangListForm extends JFrame {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
 
-        BulletinBoardButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
 
-                BulletinBoard bulletinBoard=new BulletinBoard(); //bulletin board 눌렀을때
-                bulletinBoard.setVisible(true);
-            }
-        });
         btnSignOut.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -74,25 +66,18 @@ public class NoraebangListForm extends JFrame {
         thirdNoraeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                FirstNoraebangForm firstNoraebangForm = new FirstNoraebangForm();
-                firstNoraebangForm.setVisible(true);
+                ThirdNoraebangForm thirdNoraebangForm = new ThirdNoraebangForm();
+                thirdNoraebangForm.setVisible(true);
             }
         });
 
         fourthNoraeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                FirstNoraebangForm firstNoraebangForm = new FirstNoraebangForm();
-                firstNoraebangForm.setVisible(true);
+                FourthNoraebangForm fourthNoraebangForm = new FourthNoraebangForm();
+                fourthNoraebangForm.setVisible(true);
             }
         });
 
-        fifthNoraeButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                FirstNoraebangForm firstNoraebangForm = new FirstNoraebangForm();
-                firstNoraebangForm.setVisible(true);
-            }
-        });
     }
 }

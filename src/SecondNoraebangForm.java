@@ -18,7 +18,6 @@ public class SecondNoraebangForm extends JFrame {
     private JTextField tfTime;
     private JTextField tfNumberOfPersons;
     private JButton btnAdd;
-    private JButton btnDelete;
     private DefaultTableModel model;
     private JTable showTable;
     private JScrollPane scrollTable;
@@ -43,16 +42,7 @@ public class SecondNoraebangForm extends JFrame {
                 createTable();  //JTable에 출력
             }
         });
-        btnDelete.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if(showTable.getSelectedRow() != -1) {
-                    // remove selected row from the model
-                    model.removeRow(showTable.getSelectedRow());
-                    JOptionPane.showMessageDialog(null, "Selected row deleted successfully");
-                }
-            }
-        });
+
     }
 
     private void registerNoraebangUser(){
