@@ -87,7 +87,7 @@ public class BulletinBoard extends JDialog {
         final String USERNAME = "root";
         final String PASSWORD = "7392";
 
-        String[] columnNames = {"Num","Content"};
+        String[] columnNames = {"USER","CONTENT"};
         model = new DefaultTableModel(columnNames, 0);
         PreparedStatement pstmt = null;
         ResultSet rs = null;
@@ -98,7 +98,7 @@ public class BulletinBoard extends JDialog {
             rs = pstmt.executeQuery();
             //빈 테이블 생성
             while (rs.next()) {
-                int bid = rs.getInt("bid");  //너비 수정 필요함
+                String bid = User.email;  //너비 수정 필요함
                 String content = rs.getString("content");
 
                 Object data[] = {bid, content};

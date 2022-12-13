@@ -33,7 +33,7 @@
         </constraints>
         <properties>
           <opaque value="false"/>
-          <text value="Add"/>
+          <text value="ADD"/>
         </properties>
       </component>
       <component id="df326" class="javax.swing.JButton" binding="btnCancel">
@@ -42,7 +42,7 @@
         </constraints>
         <properties>
           <opaque value="false"/>
-          <text value="Cancel"/>
+          <text value="DELETE"/>
         </properties>
       </component>
       <grid id="4026f" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
