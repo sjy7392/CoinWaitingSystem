@@ -53,7 +53,7 @@ public class DashboardForm extends JFrame {
                 Manager manager = ManagerLogin.manager;
                 if (manager != null) {  //로그인 성공
                     if (Objects.equals(manager.email, "qorrnsu00@naver.com")) {
-                        AdminFirstNoraebang adminFirstNoraebang = new AdminFirstNoraebang();
+                        FirstNoraebangForm window = new FirstNoraebangForm();
                         managerlogin.setVisible(false);
                     }
                     else if (Objects.equals(manager.email, "jiyeon@naver.com")) {

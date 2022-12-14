@@ -135,7 +135,7 @@ public class AdminFirstNoraebang extends JFrame {
             while (rs.next()) {
                 String name = rs.getString("name");
                 String phone = rs.getString("phone");
-                String numberofpersons= rs.getString("number of people");
+                String numberofpersons= rs.getString("numberofpersons");
                 String time = rs.getString("time");
 
                 Object data[] = {name, phone, numberofpersons, time};
